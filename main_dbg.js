@@ -1,10 +1,10 @@
 /* --- Config--- */
 const targetDate = "23.08.2005"; 
 const noTexts = [
-    "HUH?!", "NAHHHH du trollst :(", "Wirklich nicht?", 
-    "Das muss Ragebait sein", "Biiiittteee...", 
-    "Ich weine gleich!", "Komm schon!", 
-    "Das ist dein letzter Fehler!", "Damn☹️"
+    "HUH?!", "Hölle Nein🥀", "Das muss Ragebait sein", 
+    "Wirklich nicht?", "NAHHHH du trollst 😔", 
+    "Ich dachte wirklich du magst mich", "Ong was hab ich dir getan💀", 
+    "Damnnnn☹️", "Ok du lässt mir halt keine Wahl"
 ];
 
 // DEBUG MODE: Rote Boxen + Pfeile bleiben 
@@ -252,7 +252,7 @@ function resetButtons() {
     yesBtn.classList.remove('yes-pulse-anim');
     yesBtn.style.transform = 'scale(1)';
     yesBtn.style.transformOrigin = 'center';
-    yesBtn.innerText = "YES!";
+    yesBtn.innerText = "YES";
     yesBtn.onclick = finish;
 
     if(headerText) headerText.style.transform = 'translateY(0)';
