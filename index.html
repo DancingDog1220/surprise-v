@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suprise 👀🎉</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <button id="back-btn" class="back-btn" onclick="prevScreen()" style="display: none;">
+    ⬅️ Zurück
+    </button>
+
+    <audio id="bg-music" loop>
+        <source src="assets/music/song.mp3" type="audio/mpeg">
+        Dein Browser unterstützt kein Audio.
+    </audio>
+
+    <div id="screen-0" class="screen active">
+        <h1>Ilaja Check!</h1>
+        <p>Du kommst nur mit deinem Geburtstag weiter 😛</p>
+        <br>
+        <input type="text" id="date-input" placeholder="DD.MM.YYYY" class="date-input">
+        <br>
+        <button class="btn btn-primary" onclick="checkDate()">Überprüfen</button>
+        <p id="error-msg" style="color: red; display: none; margin-top: 10px;">Goofy das ist leider falsch 💀🥀</p>
+    </div>
+
+    <div id="screen-1" class="screen">
+
+        <div class="framed-image-container">
+            <img src="https://img.freepik.com/premium-vector/romantic-red-rose-bouquet-charming-cartoon-illustration_620197-6611.jpg" class="framed-image" alt="Blumen">
+        </div>
+
+        <h1 style="position: relative; z-index: 10;">Diese virtuellen Blumen sind für dich &lt;3</h1>
+
+        <div class="floating-phrase phrase-1">Du bist der beste Teil meines Tages <3</div>
+        <div class="floating-phrase phrase-2">Dein Lächeln ist das Schönste dieser Welt 𝜗𝜚˚✩˖</div>
+        <div class="floating-phrase phrase-3">AHHHHH du bist so toll ˚⟡˖ ࣪</div>
+        <div class="floating-phrase phrase-4">Du bringst mich immer zum gigglen, wenn ich an dich denke (˶˃ ᵕ ˂˶)</div>
+
+        <p style="font-size: 1.2rem; position: relative; z-index: 10; margin-top: 20px;">
+            Leider keine echten, wegen Mamer. Ich hab extra gefragt 😔🥀
+        </p>
+        <br>
+        <button class="btn btn-primary" onclick="nextScreen(2)" style="position: relative; z-index: 10;">Click me twin ❤️</button>
+    </div>
+
+    <div id="screen-2" class="screen">
+        <div class="paper-note">
+            "Liebe Ilaja,<br>
+            du beeinflusst mein Leben so positiv und inspirierst mich so sehr. Ich bin unglaublich froh das ich so einen tollen Menschen in meinem Leben haben darf und selbst Teil deines sein kann. <br>
+            Ich wollte dir sagen, dass ich jeden einzelnen Moment, seit wir uns kennengelernt haben, mit dir soooooo genieße und mich so sehr auf diese freue, welche wir noch nicht leben konnten aber gemeinsam, Seite an Seite, bestreitetn werden. <br>
+            Du lässt mich so gut mit mir selbst fühlen und machst mich, auf deine ganz eigene, einzigartige Weise, so glülich, dass ich mich bei dir einfach nur wohl fühlen kann.<br>
+            Ich danke dir für Alles was du für mich getan hast und ich hoffe du weißt immer, wie wichtig du mir bist.<br>
+            Bald ist ja so ein spezielles Datum ... 👀👀"
+        </div>
+        <br><br>
+        <button class="btn btn-primary" onclick="nextScreen(3)">Go on vro🙏🏼</button>
+    </div>
+
+    <div id="screen-3" class="screen">
+        <h2 style="font-weight: 400;">Deshalb wollte ich dich fragen...</h2>
+    </div>
+
+    <div id="screen-4" class="screen">
+        <div class="slideshow-container">
+            <img src="https://i.pinimg.com/736x/e7/03/10/e70310c2a66b96aca57d1ff76fba39ad.jpg" class="slide active"> <!-- shy megumi-->
+            <img src="https://i.pinimg.com/1200x/cb/40/af/cb40af29815fd9e2643b0e9a17688ce0.jpg" class="slide"> <!-- JB mit Blumenstrauß-->
+            <img src="https://i.pinimg.com/736x/eb/cd/11/ebcd113a6a7c53948c4e3abd8084a89e.jpg" class="slide"> <!-- biting nail meme-->
+            <img src="https://i.pinimg.com/736x/4b/83/00/4b83004d0a9ca1ac3a0e0f09496ae8ca.jpg" class="slide"> <!-- cat rose in hand-->
+            <img src="https://media.tenor.com/3kSzj4Fmio8AAAAi/nub-nub-cat.gif" class="slide"> <!-- nub cat shy-->
+            <img src="https://i.pinimg.com/736x/f3/f0/dd/f3f0ddc76b189f314df89b2d6e03bc5e.jpg" class="slide"> <!-- rose in mouth emoji-->
+            <img src="https://media.tenor.com/XC5FfmloM84AAAAi/embarrassed.gif" class="slide"> <!-- shy embarassed emoji-->
+            <img src="https://i.pinimg.com/736x/08/61/01/086101083b2a69674243aa9946d4417d.jpg" class="slide"> <!-- eminem rose-->
+        </div>
+
+        <h1>Will you be my Valentines? 🤭</h1>
+        
+        <div class="button-container">
+            <button id="yes-btn" class="btn btn-yes" onclick="finish()">YES</button>
+            <button id="no-btn" class="btn btn-no" onclick="handleNo()">NO</button>
+        </div>
+    </div>
+
+    <div id="screen-5" class="screen">
+        
+        <div class="final-wrapper">
+            
+            <img src="https://media.tenor.com/bWUeVRqW9-IAAAAi/fast-cat-cat-excited.gif" class="final-gif-img" alt="Happy Cat">
+
+            <div class="pixel-heart large p-top-right"></div>
+            <div class="pixel-heart large p-mid-right"></div>
+            
+            <div class="pixel-heart small p-left-1"></div>
+            <div class="pixel-heart small p-left-2"></div>
+            <div class="pixel-heart small p-bot-right"></div>
+        </div>
+
+        <h1>YAYYYYYYYYYYY! <br> YIPIEEEEEEEEE :3</h1>
+    </div>
+
+    <div id="debug-layer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; display: none;"></div>
+
+    <div id="arrow-1" class="arrow-cue">➡</div>
+    <div id="arrow-2" class="arrow-cue">➡</div>
+
+    <audio id="no-sound" preload="auto">
+        <source src="assets/music/no_rizz_short.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="main_dbg.js"></script>
+</body>
+</html>
